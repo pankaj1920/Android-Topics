@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".BaseApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -15,8 +16,6 @@
         android:theme="@style/Theme.Coroutine"
         tools:targetApi="31">
 
-
-        <profileable
             android:shell="true"
             tools:targetApi="29" />
 
@@ -36,8 +35,12 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity
+            android:name="com.example.coroutine.u4universe.LaunchAsyncRunBlockingActivity"
+            android:exported="true">
 
-        <activity android:name="com.example.coroutine.u4universe.LaunchAsyncRunBlockingActivity"
+        </activity>
+        <activity android:name="com.example.coroutine.hilt.coding_simplified.SampleDependencyInjectionActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
