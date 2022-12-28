@@ -14,6 +14,12 @@ class SampleDependencyInjectionActivity : AppCompatActivity() {
     @Inject
     lateinit var car:Car
 
+    @Inject
+    lateinit var mainIn:Main
+
+    @Inject
+    lateinit var qualiferAnotation: QualiferAnotation
+
     lateinit var binding:ActivitySampleDependencyInjectionBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +27,10 @@ class SampleDependencyInjectionActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         car.getCar()
+
+        mainIn.printName()
+
+        qualiferAnotation.getName()
 
     }
 }
